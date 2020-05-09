@@ -15,7 +15,7 @@ jobs:
       - ruby/load-cache:
           key: v2
       - ruby/install-deps
-      - ruby/save-cache
+      - ruby/save-cache:
           key: v2
       - run:
           name: Jekyll build
