@@ -12,7 +12,9 @@ jobs:
       - run:
           name: Install bundler
           command: gem install bundler
+      - ruby/load-cache
       - ruby/bundle-install
+      - ruby/save-cache
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
