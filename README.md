@@ -41,7 +41,7 @@ jobs:
       - ruby/save-cache
       - run:
           name: Jekyll build
-          command: bundle exec jekyll build
+          command: BUNDLE_PATH=vendor/bundle bundle exec jekyll build
       - persist_to_workspace:
           root: .
           paths:
