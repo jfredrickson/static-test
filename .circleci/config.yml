@@ -12,14 +12,12 @@ jobs:
       - run:
           name: Install bundler
           command: gem install bundler
-      - ruby/load-cache:
-          key: v2
+      - ruby/load-cache
       - ruby/install-deps
-      - ruby/save-cache:
-          key: v2
+      - ruby/save-cache
       - run:
           name: Jekyll build
-          command: bundle exec jekyll build
+          command: BUNDLE_PATH=vendor/bundle bundle exec jekyll build
       - persist_to_workspace:
           root: .
           paths:
